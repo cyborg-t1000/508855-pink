@@ -39,13 +39,13 @@
       <a class="download__store button" href="#">Скачать приложение</a>
       <ul class="download__list">
         <li class="download__item">
-          <img src="http://placehold.it/60x60" alt="iPhone" width="60" height="60">
+          <a href="#" class="download__link download__link--apple">Скачать в Эппл Стор</a>
         </li>
         <li class="download__item">
-          <img src="http://placehold.it/60x60" alt="Android" width="60" height="60">
+          <a href="#" class="download__link download__link--android">Скачать в Гугл-Плей</a>
         </li>
         <li class="download__item">
-          <img src="http://placehold.it/60x60" alt="Windows" width="60" height="60">
+          <a href="#" class="download__link download__link--microsoft">Скачать в Майкрософт Стор</a>
         </li>
       </ul>
       <p class="download__available">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -74,17 +74,17 @@
         <h2 class="visually-hidden">Отзывы о приложении</h2>
         <div class="reviews__list slider__list">
           <blockquote class="reviews__item slider__item">
-            <cite class="reviews__author-name">Николай Петров</cite>
+            <h3 class="reviews__author-name">Николай Петров</h3>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со
               своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
           <blockquote class="reviews__item slider__item">
-            <cite class="reviews__author-name">Иван Сидоров</cite>
+            <h3 class="reviews__author-name">Иван Сидоров</h3>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со
               своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
           <blockquote class="reviews__item slider__item">
-            <cite class="reviews__author-name">Илья Муромец</cite>
+            <h3 class="reviews__author-name">Илья Муромец</h3>
             <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные вещи! А еще я познакомился со
               своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
@@ -99,38 +99,32 @@
     <section class="price">
       <div class="price__wrapper slider">
         <h2 class="visually-hidden">Тарифные планы</h2>
-        <ul class="price__list slider__list">
-          <li class="price__item slider__item">
-            <ul class="price__conditions">
-              <li class="price__header price__header--hit">Стандарт
-                <span class="price__sum">3,99 USD</span>
-              </li>
-              <li class="price__feature price__feature--true">Розовый фильтр</li>
-              <li class="price__feature price__feature--true">Смайлики</li>
-              <li class="price__feature">Комментарии</li>
-            </ul>
-          </li>
-          <li class="price__item slider__item">
-            <ul class="price__conditions">
-              <li class="price__header">Премиум
-                <span class="price__sum">5,99 USD</span>
-              </li>
-              <li class="price__feature price__feature--true">Розовый фильтр</li>
-              <li class="price__feature price__feature--true">Смайлики</li>
-              <li class="price__feature price__feature--true">Комментарии</li>
-            </ul>
-          </li>
-          <li class="price__item slider__item">
-            <ul class="price__conditions">
-              <li class="price__header">Лайт
-                <span class="price__sum">1,99 USD</span>
-              </li>
-              <li class="price__feature price__feature--true">Розовый фильтр</li>
-              <li class="price__feature">Смайлики</li>
-              <li class="price__feature">Комментарии</li>
-            </ul>
-          </li>
-        </ul>
+        <table class="price__list slider__list">
+          <tr class="price__item slider__item">
+            <td class="price__header price__header--hit">Стандарт
+              <span class="price__sum">3,99 USD</span>
+            </td>
+            <td class="price__feature price__feature--true">Розовый фильтр</td>
+            <td class="price__feature price__feature--true">Смайлики</td>
+            <td class="price__feature">Комментарии</td>
+          </tr>
+          <tr class="price__item slider__item">
+            <td class="price__header">Премиум
+              <span class="price__sum">5,99 USD</span>
+            </td>
+            <td class="price__feature price__feature--true">Розовый фильтр</td>
+            <td class="price__feature price__feature--true">Смайлики</td>
+            <td class="price__feature price__feature--true">Комментарии</td>
+          </tr>
+          <tr class="price__item slider__item">
+            <td class="price__header">Лайт
+              <span class="price__sum">1,99 USD</span>
+            </td>
+            <td class="price__feature price__feature--true">Розовый фильтр</td>
+            <td class="price__feature">Смайлики</td>
+            <td class="price__feature">Комментарии</td>
+          </tr>
+        </table>
         <p class="price__toggles slider__toggles">
           <button class="slider__toggle" type="button">1</button>
           <button class="slider__toggle" type="button">2</button>
@@ -139,21 +133,26 @@
       </div>
     </section>
     <section class="contacts">
-      <h2 class="contacts--header">Остались вопросы? Свяжитесь с нами!</h2>
-      <ul class="contacts--list">
-        <li class="contacts--item">
-          <b class="contacts--method">Звоните:</b>
-          <a class="contacts--value" href="tel:+78125556666">+7 (812) 555-66-66</a>
-        </li>
-        <li class="contacts--item">
-          <b class="contacts--method">Пишите:</b>
-          <a class="contacts--value" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </li>
-        <li class="contacts--item">
-          <b class="contacts--method">Приезжайте в гости:</b>
-          <span class="contacts--value">ул. Большая Конюшенная 19/8</span>
-        </li>
-      </ul>
+      <h2 class="contacts__header">Остались вопросы? Свяжитесь с нами!</h2>
+      <dl class="contacts__list">
+        <dt class="contacts__method">Звоните:</dt>
+        <dd>
+          <a class="contacts__value" href="tel:+78125556666">+7 (812) 555-66-66</a>
+        </dd>
+        <dt class="contacts__method">Пишите:</dt>
+        <dd>
+          <a class="contacts__value" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </dd>
+        <dt class="contacts__method">Приезжайте в гости:</dt>
+        <dd>
+          <span class="contacts__value">ул. Большая Конюшенная 19/8</span>
+        </dd>
+      </dl>
+    </section>
+    <section class="map">
+      <div class="map__content">
+        <img class="map__map-image" src="http://placehold.it/100x320" alt="Карта проезда" width="200" height="320">
+      </div>
     </section>
   </main>
 </body>

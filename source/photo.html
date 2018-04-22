@@ -9,7 +9,7 @@
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo">
+    <a class="page-header__logo" href="index.html">
       <img class="page-header__logo-image" src="http://placehold.it/75x22" width="75" height="22" alt="Pink">
     </a>
     <nav class="main-nav">
@@ -17,10 +17,10 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
+            <a href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
-            <a href="photo.html">Фотографии</a>
+            <a>Фотографии</a>
           </li>
           <li class="site-list__item">
             <a href="contest.html">Конкурс</a>
@@ -40,56 +40,56 @@
       <ul class="photos__list">
         <li class="photos__item panorama-of-day">
           <figure>
-            <p class="photos__image">
-              <a href="#">
-                <img src="http://placehold.it/320x135" alt="Панорама дня" width="320" height="135">
-              </a>
-            </p>
+            <a href="#">
+              <img src="http://placehold.it/320x135" alt="Панорама дня" width="320" height="135">
+            </a>
             <figcaption>
               <div class="photos__post">
                 <p class="photos__name">Анна
                   <time class="photos__date" datetime="2017-09-19">(5 минут назад)</time>
                 </p>
-                <p class="photos__text">Прыгать или нет? Напишите в коментарии свой ответ и смотрите прямую трансляцию в перископе, задавайте свои
+                <blockquote class="photos__text">Прыгать или нет? Напишите в коментарии свой ответ и смотрите прямую трансляцию в перископе, задавайте свои
                   вопросы!
+                </blockquote>
+                <p class="photos__likes">Нравится:
+                  <span class="photos__likes-count">215</span>
                 </p>
-                <p class="photos__likes">Нравится: 215</p>
               </div>
             </figcaption>
           </figure>
         </li>
         <li class="photos__item">
           <figure>
-            <p class="photos__image">
-              <a href="#">
-                <img src="http://placehold.it/280x180" alt="Панорама дня" width="280" height="180">
-              </a>
-            </p>
+            <a href="#">
+              <img src="http://placehold.it/280x180" alt="Панорама дня" width="280" height="180">
+            </a>
             <figcaption>
               <div class="photos__post">
                 <p class="photos__name">Левон
                   <time class="photos__date" datetime="2017-09-19">(5 часов назад)</time>
                 </p>
-                <p class="photos__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-                <p class="photos__likes">Нравится: 356</p>
+                <blockquote class="photos__text">Вчера он на луну летал, сегодня в руки к нам попал.</blockquote>
+                <p class="photos__likes">Нравится:
+                  <span class="photos__likes-count">356</span>
+                </p>
               </div>
             </figcaption>
           </figure>
         </li>
         <li class="photos__item">
           <figure>
-            <p class="photos__image">
-              <a href="#">
-                <img src="http://placehold.it/280x180" alt="Панорама дня" width="280" height="180">
-              </a>
-            </p>
+            <a href="#">
+              <img src="http://placehold.it/280x180" alt="Панорама дня" width="280" height="180">
+            </a>
             <figcaption>
               <div class="photos__post">
                 <p class="photos__name">Надежда
                   <time class="photos__date" datetime="2017-09-19">(45 часов назад)</time>
                 </p>
-                <p class="photos__text">Всем GM и взаимные лайки!</p>
-                <p class="photos__likes">Нравится: 2560</p>
+                <blockquote class="photos__text">Всем GM и взаимные лайки!</blockquote>
+                <p class="photos__likes">Нравится:
+                  <span class="photos__likes-count">2560</span>
+                </p>
               </div>
             </figcaption>
           </figure>
@@ -99,50 +99,43 @@
     </section>
     <section class="upload">
       <h2 class="visually-hidden">Загрузка новой фотографии</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
         <div class="upload__photo">
           <img src="http://placehold.it/280x375" alt="Загруженное фото" width="280" height="375">
         </div>
         <input type="file">
-        <ul class="upload__effect">
-          <li>
-            <input type="radio" name="effect" id="crop" value="crop">
-            <label for="crop">Обрезка</label>
-          </li>
-          <li>
-            <input type="radio" name="effect" id="bucket" value="bucket">
-            <label for="bucket">Заливка</label>
-          </li>
-          <li>
-            <input type="radio" name="effect" id="contrast" value="contrast">
-            <label for="contrast">Контраст</label>
-          </li>
-        </ul>
+        <div class="upload__effects">
+          <button class="upload__effect upload__effect--crop" name="crop" value="crop">Обрезка</button>>
+          <button class="upload__effect upload__effect--bucket" name="bucket" value="bucket">Заливка</button>
+          <button class="upload__effect upload__effect--contrast" name="contrast" value="contrast">Контраст</button>
+        </div>
         <input type="range" name="range" id="range">
-        <button class="button button--red" type="submit">Запостить</button>
-        <button class="button button--grey" type="reset">Отмена</button>
+        <button class="button button--submit" type="submit">Запостить</button>
+        <button class="button button--cancel" type="reset">Отмена</button>
       </form>
     </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__logo">
-      <img src="http://placehold.it/160x50" alt="Pink logo" width="160" height="50">
+      <a class="page-footer__link" href="index.html">
+        <img src="http://placehold.it/160x50" alt="Pink logo" width="160" height="50">
+      </a>
     </div>
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="https://vk.com/">
-            <img src="http://placehold.it/50x50" alt="Vkontakte" width="50" height="50">
+            Мы Вконтакте
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" href="https://www.facebook.com/">
-            <img src="http://placehold.it/50x50" alt="Facebook" width="50" height="50">
+            Мы на Фейсбуке
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--youtube" href="https://www.youtube.com/">
-            <img src="http://placehold.it/50x50" alt="Youtube" width="50" height="50">
+            Мы на Ютубе
           </a>
         </li>
       </ul>

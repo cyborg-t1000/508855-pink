@@ -9,7 +9,7 @@
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo">
+    <a class="page-header__logo" href="index.html">
       <img class="page-header__logo-image" src="http://placehold.it/75x22" width="75" height="22" alt="Pink">
     </a>
     <nav class="main-nav">
@@ -17,13 +17,13 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
+            <a href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
             <a href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item">
-            <a href="contest.html">Конкурс</a>
+            <a>Конкурс</a>
           </li>
           <li class="site-list__item">
             <a href="#">HTML Academy</a>
@@ -38,75 +38,83 @@
       <h2 class="visually-hidden">Заполните форму ниже для участия в конкурсе</h2>
       <p class="contest__top-tagline">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
       <form action="https://echo.htmlacademy.ru" method="post">
-        <p class="contest__user-data">
-          <label for="surname">Фамилия:</label>
-          <input type="text" name="surname" id="surname" placeholder="Укажите фамилию *">
-        </p>
-        <p class="contest__user-data">
-          <label for="name">Имя:</label>
-          <input type="text" name="name" id="name" placeholder="Укажите ваше имя *">
-        </p>
-        <p class="contest__user-data">
-          <label for="midname">Отчество:</label>
-          <input type="text" name="midname" id="midname" placeholder="Ну и отчество тоже">
-        </p>
-        <div class="contest__achivements">
-          <p class="contest__achivements-header form-header">Ваши безбашенные достижения в путешествии</p>
-          <ul class="contest__achivements-list">
-            <li class="contest__achivements-item">
-              <input type="checkbox" name="achivement" id="achivement_1">
-              <label for="achivement_1">Сделал селфи с акулой</label>
-            </li>
-            <li class="contest__achivements-item">
-              <input type="checkbox" name="achivement" id="achivement_2">
-              <label for="achivement_2">Обгорел на пляже</label>
-            </li>
-            <li class="contest__achivements-item">
-              <input type="checkbox" name="achivement" id="achivement_3">
-              <label for="achivement_3">Видел Чака Норриса</label>
-            </li>
-            <li class="contest__achivements-item">
-              <input type="checkbox" name="achivement" id="achivement_4">
-              <label for="achivement_4">Накупил сувениров</label>
-            </li>
-            <li class="contest__achivements-item">
-              <input type="checkbox" name="achivement" id="achivement_5">
-              <label for="achivement_5">Удержал башню</label>
-            </li>
-            <li class="contest__achivements-item">
-              <input type="checkbox" name="achivement" id="achivement_6">
-              <label for="achivement_6">Разгромил отель</label>
-            </li>
-          </ul>
+        <fieldset>
+          <p class="contest__user-data">
+            <label class="contest__label" for="surname">Фамилия:</label>
+            <input class="contest__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *">
+          </p>
+          <p class="contest__user-data">
+            <label class="contest__label" for="name">Имя:</label>
+            <input class="contest__input" type="text" name="name" id="name" placeholder="Укажите ваше имя *">
+          </p>
+          <p class="contest__user-data">
+            <label class="contest__label" for="midname">Отчество:</label>
+            <input class="contest__input" type="text" name="midname" id="midname" placeholder="Ну и отчество тоже">
+          </p>
+        </fieldset>
+        <div class="contest__achievements">
+          <p class="contest__achievements-header form-header">Ваши безбашенные достижения в путешествии</p>
+          <fieldset>
+            <ul class="contest__achievements-list">
+              <li class="contest__achievements-item">
+                <input class="contest__checkbox" type="checkbox" name="achivement_1" id="achivement_1">
+                <label class="contest__label-choice" for="achivement_1">Сделал селфи с акулой</label>
+              </li>
+              <li class="contest__achievements-item">
+                <input class="contest__checkbox" type="checkbox" name="achivement_2" id="achivement_2">
+                <label class="contest__label-choice" for="achivement_2">Обгорел на пляже</label>
+              </li>
+              <li class="contest__achievements-item">
+                <input class="contest__checkbox" type="checkbox" name="achivement_3" id="achivement_3">
+                <label class="contest__label-choice" for="achivement_3">Видел Чака Норриса</label>
+              </li>
+              <li class="contest__achievements-item">
+                <input class="contest__checkbox" type="checkbox" name="achivement_4" id="achivement_4">
+                <label class="contest__label-choice" for="achivement_4">Накупил сувениров</label>
+              </li>
+              <li class="contest__achievements-item">
+                <input class="contest__checkbox" type="checkbox" name="achivement_5" id="achivement_5">
+                <label class="contest__label-choice" for="achivement_5">Удержал башню</label>
+              </li>
+              <li class="contest__achievements-item">
+                <input class="contest__checkbox" type="checkbox" name="achivement_6" id="achivement_6">
+                <label class="contest__label-choice" for="achivement_6">Разгромил отель</label>
+              </li>
+            </ul>
+          </fieldset>
         </div>
-        <p class="contest__user-data">
-          <label for="phone">Отчество:</label>
-          <input type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
-        </p>
-        <p class="contest__user-data">
-          <label for="email">Отчество:</label>
-          <input type="email" name="email" id="email" placeholder="Введите почту *">
-        </p>
+        <fieldset>
+          <p class="contest__user-data">
+            <label class="contest__label" for="phone">Номер телефона:</label>
+            <input class="contest__input" type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста">
+          </p>
+          <p class="contest__user-data">
+            <label class="contest__label" for="email">Адрес почты:</label>
+            <input class="contest__input" type="email" name="email" id="email" placeholder="Введите почту *">
+          </p>
+        </fieldset>
         <div class="contest__app">
           <p class="contest__app-header form-header">С каким приложением путешествовали?</p>
-          <ul class="contest__app-list">
-            <li class="contest__app-item">
-              <input type="radio" name="app" id="app_1">
-              <label for="app_1">Pink для iOS</label>
-            </li>
-            <li class="contest__apps-item">
-              <input type="radio" name="app" id="app_2">
-              <label for="app_2">Pink на Android</label>
-            </li>
-            <li class="contest__apps-item">
-              <input type="radio" name="app" id="app_3">
-              <label for="app_3">Windows Phone</label>
-            </li>
-          </ul>
+          <fieldset>
+            <ul class="contest__app-list">
+              <li class="contest__app-item">
+                <input class="contest__radio" type="radio" name="app" id="app_1" value="1">
+                <label class="contest__label-choice" for="app_1">Pink для iOS</label>
+              </li>
+              <li class="contest__apps-item">
+                <input class="contest__radio" type="radio" name="app" id="app_2" value="1">
+                <label class="contest__label-choice" for="app_2">Pink на Android</label>
+              </li>
+              <li class="contest__apps-item">
+                <input class="contest__radio" type="radio" name="app" id="app_3" value="1">
+                <label class="contest__label-choice" for="app_3">Windows Phone</label>
+              </li>
+            </ul>
+          </fieldset>
         </div>
         <div class="contest__post">
           <p class="contest__post-header form-header">Опишите свои эмоции</p>
-          <textarea name="text" id="text" cols="30" rows="10">Можно прям в красках, не стесняясь в выражениях</textarea>
+          <textarea class="contest__input" name="text" id="text" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </div>
         <button class="button button--square" type="submit">Отправить форму</button>
       </form>
@@ -116,23 +124,25 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__logo">
-      <img src="http://placehold.it/160x50" alt="Pink logo" width="160" height="50">
+      <a class="page-footer__link" href="index.html">
+        <img src="http://placehold.it/160x50" alt="Pink logo" width="160" height="50">
+      </a>
     </div>
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
           <a class="social__link social__link--vkontakte" href="https://vk.com/">
-            <img src="http://placehold.it/50x50" alt="Vkontakte" width="50" height="50">
+            Мы Вконтакте
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" href="https://www.facebook.com/">
-            <img src="http://placehold.it/50x50" alt="Facebook" width="50" height="50">
+            Мы на Фейсбуке
           </a>
         </li>
         <li class="social__item">
           <a class="social__link social__link--youtube" href="https://www.youtube.com/">
-            <img src="http://placehold.it/50x50" alt="Youtube" width="50" height="50">
+            Мы на Ютубе
           </a>
         </li>
       </ul>
